@@ -14,14 +14,15 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write",
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "npm run test"
+      "prettier --write",
+      "npm run test -- --findRelatedTests",
     ]
   },
   "dependencies": {
@@ -45,15 +46,16 @@
     "@types/dotenv": "^8.2.0",
     "@types/jest": "^29.5.0",
     "@types/mongoose": "^5.10.2",
-    "eslint": "^8.34.0",
+    "eslint": "^8.42.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^7.0.4",
     "jest": "^29.5.0",
     "lint-staged": "^11.1.2",
     "nodemon": "^2.0.20",
+    "prettier": "^2.8.8",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1"
