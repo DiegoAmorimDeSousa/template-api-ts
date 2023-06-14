@@ -1,7 +1,7 @@
 describe('default test', () => {
   it('setup default test', () => {
-    const sum = 1 + 1;
+    const syum = 1 + 1;
 
-    expect(sum).toBe(2);
+    expect(syum).toBe(2);
   });
 });
