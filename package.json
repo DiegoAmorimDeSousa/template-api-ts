@@ -12,19 +12,6 @@
     "start": "node ./dist/index.js",
     "pre-commit": "lint-staged"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write",
-      "npm run test -- --findRelatedTests",
-    ]
-  },
   "dependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.13",
